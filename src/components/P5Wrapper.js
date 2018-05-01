@@ -21,11 +21,15 @@ export default class P5Wrapper extends React.Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return false
+  }
+
   componentWillUnmount() {
     this.canvas.remove()
   }
 
   render() {
-    return <div ref={wrapper => this.wrapper = wrapper}></div>;
+    return <div style={{display: 'block'}} ref={wrapper => this.wrapper = wrapper}></div>;
   }
 }
