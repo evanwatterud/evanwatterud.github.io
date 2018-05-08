@@ -3,6 +3,8 @@ export default function purpleRain (p) {
 
   p.setup = function() {
     p.createCanvas(window.innerWidth, window.innerHeight);
+    p.canvas.style.zIndex = '-1'
+    p.canvas.style.position = 'absolute'
     system = new ParticleSystem(p.createVector(p.width/2, 50));
   }
 
