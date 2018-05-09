@@ -2,6 +2,7 @@ import React from 'react'
 import P5Wrapper from '../components/P5Wrapper'
 import purpleRain from '../sketches/purpleRain'
 import particles from '../sketches/particles'
+import SocialBar from '../components/SocialBar'
 
 class HomePage extends React.Component {
 
@@ -14,6 +15,7 @@ class HomePage extends React.Component {
         <div style={styles.profileImageContainer}>
           <img style={styles.profileImage} src={require('../assets/images/profileImage.JPG')} alt=''/>
         </div>
+        <SocialBar />
       </div>
     )
   }
