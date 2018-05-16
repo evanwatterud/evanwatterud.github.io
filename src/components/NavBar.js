@@ -1,11 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import SocialBar from './SocialBar'
 
 class NavBar extends React.Component {
+  onContactClicked = () => {
+    window.scrollTo(0, window.innerHeight);
+  }
+
   render () {
     return (
       <div style={styles.navContainer}>
-
+        <div style={styles.linksContainer} >
+          <a style={styles.contactLink} onClick={this.onContactClicked}>
+            <p>Text</p>
+          </a>
+        </div>
+        <SocialBar />
       </div>
     )
   }
@@ -19,9 +29,16 @@ const styles = {
     top: 0,
     backgroundColor: '#f7f7f4',
     overflow: 'hidden',
-    webkitBoxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
-    mozBoxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
+    WebkitBoxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
+    MozBoxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
     boxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)'
+  },
+
+  contactLink: {
+    float: 'left',
+    backgroundColor: 'red',
+    width: '100px',
+    height: '100%'
   }
 }
 

@@ -30,33 +30,40 @@ export default SocialBar;
 
 const styles = {
   socialBarContainer: {
+    width: '15%',
+    height: '100%',
     display: 'flex',
     flex: 2,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    float: 'right'
   },
 
   linkedInLogoLink: {
-    marginLeft: '2.5%',
-    height: '64px',
-    width: '64px',
+    marginLeft: '4%',
+    height: '48px',
+    width: '48px',
     borderRadius: '50%',
     cursor: 'pointer'
   },
 
   gitHubLogoLink: {
-    marginRight: '2.5%',
-    height: '64px',
-    width: '64px',
+    marginRight: '4%',
+    height: '48px',
+    width: '48px',
     borderRadius: '50%',
     cursor: 'pointer'
   },
 
   linkedInImage: {
-    borderRadius: '50%'
+    borderRadius: '50%',
+    height: '48px',
+    width: '48px'
   },
 
   gitHubImage: {
-    borderRadius: '50%'
+    borderRadius: '50%',
+    height: '48px',
+    width: '48px'
   }
 }
