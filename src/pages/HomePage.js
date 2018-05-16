@@ -10,15 +10,12 @@ class HomePage extends React.Component {
 
   render () {
     return (
-      <div>
+      <div style={styles.mainContainer}>
+        <div style={styles.backgroundImageContainer}>
+          <img style={styles.backgroundImage} src={require('../assets/images/mountains_1.jpg')} />
+        </div>
         <div style={styles.canvasContainer}>
           <P5Wrapper sketch={purpleRain} />
-        </div>
-        <div style={styles.mainContainer}>
-          <div style={styles.profileImageContainer}>
-            <img style={styles.profileImage} src={require('../assets/images/profileImage.JPG')} alt=''/>
-          </div>
-          <SocialBar />
         </div>
       </div>
     )
@@ -27,33 +24,24 @@ class HomePage extends React.Component {
 
 const styles = {
   mainContainer: {
-    width: window.innerWidth,
-    height: window.innerHeight,
+    height: '200%',
     display: 'flex',
     flexDirection: 'column',
     position: 'absolute'
   },
 
-  profileImage: {
-    objectFit: 'cover',
-    width: '200px',
-    height: '200px',
-    transform: 'rotate(90deg)',
-    borderRadius: '50%'
+  backgroundImage: {
+    flex: 1,
+    width: '100%'
   },
 
-  profileImageContainer: {
-    flex: 3,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+  backgroundImageContainer: {
+    flex: 1,
+    display: 'flex'
   },
 
   canvasContainer: {
-    zIndex: '-1',
-    position: 'absolute',
-    height: window.innerHeight,
-    width: window.innerWidth,
+    flex: 1,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center'
