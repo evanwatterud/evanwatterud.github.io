@@ -31,10 +31,9 @@ export default SocialBar;
 const styles = {
   socialBarContainer: {
     display: 'flex',
+    flex: 2,
     justifyContent: 'center',
-    alignItems: 'center',
-    height: '100%',
-    marginTop: '13%'
+    alignItems: 'center'
   },
 
   linkedInLogoLink: {

@@ -6,7 +6,7 @@ export default class P5Wrapper extends React.Component {
 
   componentDidMount() {
     this.canvas = new p5(this.props.sketch, this.wrapper);
-    if( this.canvas.myCustomRedrawAccordingToNewPropsHandler ) {
+    if(this.canvas.myCustomRedrawAccordingToNewPropsHandler) {
       this.canvas.myCustomRedrawAccordingToNewPropsHandler(this.props);
     }
   }
@@ -30,6 +30,8 @@ export default class P5Wrapper extends React.Component {
   }
 
   render() {
-    return <div ref={wrapper => this.wrapper = wrapper}></div>;
+    return <div style={
+        {flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center'}
+      } ref={wrapper => this.wrapper = wrapper}></div>;
   }
 }

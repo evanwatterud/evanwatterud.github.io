@@ -1,4 +1,4 @@
-export default function purpleRain (p) {
+export default function particles (p) {
   var system;
 
   p.setup = function() {

@@ -3,8 +3,9 @@ export default function purpleRain (p) {
   const NUM_DROPS = 200
 
   p.setup = function () {
-    p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL)
-    p.frameRate(60)
+    p.createCanvas(600, 300)
+    p.canvas.style.zIndex = '-1'
+    p.canvas.style.position = 'absolute'
     createDrops()
   }
 
