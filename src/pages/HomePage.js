@@ -11,6 +11,7 @@ class HomePage extends React.Component {
   render () {
     return (
       <div style={styles.mainContainer}>
+        <NavBar />
         <div style={styles.backgroundImageContainer}>
           <img style={styles.backgroundImage} src={require('../assets/images/mountains_1.jpg')} />
         </div>
