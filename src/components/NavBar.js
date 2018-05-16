@@ -1,18 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SocialBar from './SocialBar'
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 class NavBar extends React.Component {
   onContactClicked = () => {
-    window.scrollTo(0, window.innerHeight);
+    scroll.scrollToBottom()
   }
 
   render () {
     return (
       <div style={styles.navContainer}>
         <div style={styles.linksContainer} >
-          <a style={styles.contactLink} onClick={this.onContactClicked}>
-            <p>Text</p>
+          <a style={styles.link} onClick={this.onContactClicked}>
+            Text
           </a>
         </div>
         <SocialBar />
@@ -34,11 +35,25 @@ const styles = {
     boxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)'
   },
 
-  contactLink: {
+  linksContainer: {
     float: 'left',
-    backgroundColor: 'red',
-    width: '100px',
+    display: 'flex',
+    justifyContent: 'center',
+    width: '10%',
     height: '100%'
+  },
+
+  link: {
+    backgroundColor: 'red',
+    textDecoration: 'none',
+    textTransform: 'uppercase',
+    letterSpacing: '1px',
+    textShadow: '0 0 1px rgba(255,255,255,0.3)',
+    fontFamily: "'Raleway', sans-serif",
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 }
 
