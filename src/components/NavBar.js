@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SocialBar from './SocialBar'
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import '../css/navLinks.css'
 
 class NavBar extends React.Component {
   onContactClicked = () => {
@@ -11,9 +12,12 @@ class NavBar extends React.Component {
   render () {
     return (
       <div style={styles.navContainer}>
-        <div style={styles.linksContainer} >
-          <a style={styles.link} onClick={this.onContactClicked}>
-            Text
+        <div className="navLinks" style={styles.linksContainer} >
+          <a onClick={this.onContactClicked}>
+            Contact Me
+          </a>
+          <a onClick={this.onContactClicked}>
+            Resume
           </a>
         </div>
         <SocialBar />
@@ -32,28 +36,18 @@ const styles = {
     overflow: 'hidden',
     WebkitBoxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
     MozBoxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
-    boxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)'
+    boxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
+    zIndex: 100
   },
 
   linksContainer: {
     float: 'left',
     display: 'flex',
     justifyContent: 'center',
-    width: '10%',
-    height: '100%'
-  },
-
-  link: {
-    backgroundColor: 'red',
-    textDecoration: 'none',
-    textTransform: 'uppercase',
-    letterSpacing: '1px',
-    textShadow: '0 0 1px rgba(255,255,255,0.3)',
-    fontFamily: "'Raleway', sans-serif",
-    flex: 1,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+    flexDirection: 'row',
+    width: '20%',
+    height: '100%',
+    marginLeft: '3%'
   }
 }
 

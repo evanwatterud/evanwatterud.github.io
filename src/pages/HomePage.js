@@ -5,6 +5,7 @@ import particles from '../sketches/particles'
 import explodingDrops from '../sketches/explodingDrops'
 import SocialBar from '../components/SocialBar'
 import NavBar from '../components/NavBar'
+import '../css/homePage.css'
 
 class HomePage extends React.Component {
 
@@ -12,6 +13,10 @@ class HomePage extends React.Component {
     return (
       <div style={styles.mainContainer}>
         <NavBar />
+        <div className="homepageTextContainer" >
+          <p className="header" >- Evan Watterud -</p>
+          <p className="subHeader" >Software developer | rock climber</p>
+        </div>
         <div style={styles.backgroundImageContainer}>
           <img style={styles.backgroundImage} src={require('../assets/images/mountains_1.jpg')} />
         </div>
