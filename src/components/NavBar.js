@@ -6,6 +6,10 @@ import '../css/navLinks.css'
 
 class NavBar extends React.Component {
   onContactClicked = () => {
+    scroll.scrollTo(window.innerHeight)
+  }
+
+  onResumeClicked = () => {
     scroll.scrollToBottom()
   }
 
@@ -16,7 +20,7 @@ class NavBar extends React.Component {
           <a onClick={this.onContactClicked}>
             Contact Me
           </a>
-          <a onClick={this.onContactClicked}>
+          <a onClick={this.onResumeClicked}>
             Resume
           </a>
         </div>

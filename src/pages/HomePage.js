@@ -6,6 +6,8 @@ import explodingDrops from '../sketches/explodingDrops'
 import SocialBar from '../components/SocialBar'
 import NavBar from '../components/NavBar'
 import '../css/homePage.css'
+import resume from '../assets/resume.pdf'
+import PDF from 'react-pdf-js'
 
 class HomePage extends React.Component {
 
@@ -20,8 +22,11 @@ class HomePage extends React.Component {
         <div style={styles.backgroundImageContainer}>
           <img style={styles.backgroundImage} src={require('../assets/images/mountains_1.jpg')} />
         </div>
-        <div style={styles.canvasContainer}>
+        <div style={styles.contactPageContainer}>
           <P5Wrapper sketch={purpleRain} />
+        </div>
+        <div style={styles.resumePageContainer}>
+          <PDF file={resume} />
         </div>
       </div>
     )
@@ -30,7 +35,7 @@ class HomePage extends React.Component {
 
 const styles = {
   mainContainer: {
-    height: '200%',
+    height: '300%',
     display: 'flex',
     flexDirection: 'column',
     position: 'absolute'
@@ -46,7 +51,14 @@ const styles = {
     display: 'flex'
   },
 
-  canvasContainer: {
+  contactPageContainer: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  resumePageContainer: {
     flex: 1,
     display: 'flex',
     justifyContent: 'center',
