@@ -5,6 +5,10 @@ import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } 
 import '../css/navLinks.css'
 
 class NavBar extends React.Component {
+  state = {
+    isBottom: false
+  }
+
   onContactClicked = () => {
     scroll.scrollTo(window.innerHeight)
   }
@@ -13,9 +17,22 @@ class NavBar extends React.Component {
     scroll.scrollToBottom()
   }
 
+  componentDidMount() {
+    document.addEventListener('scroll', () => {
+      const isBottom = window.scrollY > (window.innerHeight * 2) - 1;
+      console.log(isBottom);
+      if (isBottom !== this.state.isBottom) {
+        this.setState(prevState => {
+          prevState.isBottom = isBottom
+          return prevState
+        })
+      }
+    });
+  }
+
   render () {
     return (
-      <div style={styles.navContainer}>
+      <div style={{...styles.navContainer, opacity: (this.state.isBottom ? 0 : 1)}}>
         <div className="navLinks" style={styles.linksContainer} >
           <a onClick={this.onContactClicked}>
             Contact Me
@@ -41,7 +58,8 @@ const styles = {
     WebkitBoxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
     MozBoxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
     boxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
-    zIndex: 100
+    zIndex: 100,
+    transition: 'opacity 0.7s'
   },
 
   linksContainer: {

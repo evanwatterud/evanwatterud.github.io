@@ -26,7 +26,7 @@ class HomePage extends React.Component {
           <P5Wrapper sketch={purpleRain} />
         </div>
         <div style={styles.resumePageContainer}>
-          <PDF file={resume} />
+          <PDF style={styles.resume} file={resume} />
         </div>
       </div>
     )
@@ -63,6 +63,13 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+
+  resume: {
+    border: '1px solid rgba(0, 0, 0, .3)',
+    WebkitBoxShadow: '5px 5px 5px 0px rgba(0,0,0,0.36)',
+    MozBoxShadow: '5px 5px 5px 0px rgba(0,0,0,0.36)',
+    boxShadow: '5px 5px 5px 0px rgba(0,0,0,0.36)',
   }
 }
 
