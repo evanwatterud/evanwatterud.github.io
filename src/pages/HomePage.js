@@ -6,6 +6,7 @@ import explodingDrops from '../sketches/explodingDrops'
 import SocialBar from '../components/SocialBar'
 import NavBar from '../components/NavBar'
 import '../css/homePage.css'
+import '../css/contactForm.css'
 import resume from '../assets/resume.pdf'
 import PDF from 'react-pdf-js'
 
@@ -23,10 +24,23 @@ class HomePage extends React.Component {
           <img style={styles.backgroundImage} src={require('../assets/images/mountains_1.jpg')} />
         </div>
         <div style={styles.contactPageContainer}>
-          <P5Wrapper sketch={purpleRain} />
+          <div style={styles.pongContainer} >
+            <P5Wrapper sketch={purpleRain} />
+          </div>
+          <div style={styles.contactFormContainer} >
+            <div className="contactFormWrapper" >
+              <form className="contactForm" action="https://formspree.io/evanwatterud@gmail.com"
+                  method="POST">
+                <input className="contactInputs" type="text" name="name" placeholder="Your Name" />
+                <input className="contactInputs" type="email" name="_replyto" placeholder="Contact Email" />
+                <textarea name="message" placeholder="Your Message"></textarea>
+                <input id="submitButton" type="submit" value="Send" />
+              </form>
+            </div>
+          </div>
         </div>
         <div style={styles.resumePageContainer}>
-          <PDF style={styles.resume} file={resume} />
+          <PDF fillWidth style={styles.resume} file={resume} />
         </div>
       </div>
     )
@@ -58,11 +72,23 @@ const styles = {
     alignItems: 'center'
   },
 
-  resumePageContainer: {
+  pongContainer: {
+    flex: 1
+  },
+
+  contactFormContainer: {
     flex: 1,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+
+  resumePageContainer: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f7f7f7'
   },
 
   resume: {

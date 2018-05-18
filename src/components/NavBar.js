@@ -20,7 +20,6 @@ class NavBar extends React.Component {
   componentDidMount() {
     document.addEventListener('scroll', () => {
       const isBottom = window.scrollY > (window.innerHeight * 2) - 1;
-      console.log(isBottom);
       if (isBottom !== this.state.isBottom) {
         this.setState(prevState => {
           prevState.isBottom = isBottom
