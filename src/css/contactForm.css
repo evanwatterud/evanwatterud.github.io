@@ -16,14 +16,18 @@ textarea:focus, input:focus{
 }
 
 .contactForm textarea {
-  background-color: #f8f8f8;
+  background-color: #e0dede;
   margin: 10px 0 10px 0;
+  height: 140px;
+  border: 1px solid black;
   resize: none;
 }
 
 .contactInputs {
-  background-color: #f8f8f8;
+  background-color: #e0dede;
   margin: 10px 0 10px 0;
+  height: 30px;
+  border: 1px solid black;
 }
 
 #submitButton {

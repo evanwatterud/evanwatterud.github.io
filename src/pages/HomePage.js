@@ -5,8 +5,9 @@ import particles from '../sketches/particles'
 import explodingDrops from '../sketches/explodingDrops'
 import SocialBar from '../components/SocialBar'
 import NavBar from '../components/NavBar'
+import ContactForm from '../components/ContactForm'
+
 import '../css/homePage.css'
-import '../css/contactForm.css'
 import resume from '../assets/resume.pdf'
 import PDF from 'react-pdf-js'
 
@@ -28,15 +29,7 @@ class HomePage extends React.Component {
             <P5Wrapper sketch={purpleRain} />
           </div>
           <div style={styles.contactFormContainer} >
-            <div className="contactFormWrapper" >
-              <form className="contactForm" action="https://formspree.io/evanwatterud@gmail.com"
-                  method="POST">
-                <input className="contactInputs" type="text" name="name" placeholder="Your Name" />
-                <input className="contactInputs" type="email" name="_replyto" placeholder="Contact Email" />
-                <textarea name="message" placeholder="Your Message"></textarea>
-                <input id="submitButton" type="submit" value="Send" />
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
         <div style={styles.resumePageContainer}>

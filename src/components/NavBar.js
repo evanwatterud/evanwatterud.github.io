@@ -17,6 +17,10 @@ class NavBar extends React.Component {
     scroll.scrollToBottom()
   }
 
+  onAboutClicked = () => {
+    scroll.scrollTo(window.innerHeight)
+  }
+
   componentDidMount() {
     document.addEventListener('scroll', () => {
       const isBottom = window.scrollY > (window.innerHeight * 2) - 1;
@@ -32,12 +36,15 @@ class NavBar extends React.Component {
   render () {
     return (
       <div style={{...styles.navContainer, opacity: (this.state.isBottom ? 0 : 1)}}>
-        <div className="navLinks" style={styles.linksContainer} >
+        <div className="navLinks" >
           <a onClick={this.onContactClicked}>
             Contact Me
           </a>
           <a onClick={this.onResumeClicked}>
             Resume
+          </a>
+          <a onClick={this.onAboutClicked}>
+            About Me
           </a>
         </div>
         <SocialBar />
@@ -59,16 +66,6 @@ const styles = {
     boxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
     zIndex: 100,
     transition: 'opacity 0.7s'
-  },
-
-  linksContainer: {
-    float: 'left',
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'row',
-    width: '20%',
-    height: '100%',
-    marginLeft: '3%'
   }
 }
 

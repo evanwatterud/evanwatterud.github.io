@@ -1,3 +1,13 @@
+.navLinks {
+	float: left;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	width: 30%;
+	height: 100%;
+	margin-left: 3%;
+}
+
 .navLinks a {
 	display: flex;
   justify-content: center;
