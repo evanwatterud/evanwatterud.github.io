@@ -6,6 +6,7 @@ import explodingDrops from '../sketches/explodingDrops'
 import SocialBar from '../components/SocialBar'
 import NavBar from '../components/NavBar'
 import ContactForm from '../components/ContactForm'
+import AboutMe from '../components/AboutMe'
 
 import '../css/homePage.css'
 import resume from '../assets/resume.pdf'
@@ -17,21 +18,24 @@ class HomePage extends React.Component {
     return (
       <div style={styles.mainContainer}>
         <NavBar />
+
         <div className="homepageTextContainer" >
           <p className="header" >- Evan Watterud -</p>
           <p className="subHeader" >Software developer | rock climber</p>
         </div>
+
         <div style={styles.backgroundImageContainer}>
           <img style={styles.backgroundImage} src={require('../assets/images/mountains_1.jpg')} />
         </div>
-        <div style={styles.contactPageContainer}>
-          <div style={styles.pongContainer} >
-            <P5Wrapper sketch={purpleRain} />
-          </div>
-          <div style={styles.contactFormContainer} >
-            <ContactForm />
-          </div>
+
+        <div style={styles.aboutMePageContainer}>
+          <AboutMe/>
         </div>
+
+        <div style={styles.contactPageContainer}>
+          <ContactForm />
+        </div>
+
         <div style={styles.resumePageContainer}>
           <PDF fillWidth style={styles.resume} file={resume} />
         </div>
@@ -42,7 +46,7 @@ class HomePage extends React.Component {
 
 const styles = {
   mainContainer: {
-    height: '300%',
+    height: '350%',
     display: 'flex',
     flexDirection: 'column',
     position: 'absolute'
@@ -58,22 +62,17 @@ const styles = {
     display: 'flex'
   },
 
+  aboutMePageContainer: {
+    flex: 0.5,
+    display: 'flex'
+  },
+
   contactPageContainer: {
     flex: 1,
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
-  },
-
-  pongContainer: {
-    flex: 1
-  },
-
-  contactFormContainer: {
-    flex: 1,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: '#058414'
   },
 
   resumePageContainer: {

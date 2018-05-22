@@ -16,7 +16,7 @@ textarea:focus, input:focus{
 }
 
 .contactForm textarea {
-  background-color: #e0dede;
+  background-color: #026d0e;
   margin: 10px 0 10px 0;
   height: 140px;
   border: 1px solid black;
@@ -24,7 +24,7 @@ textarea:focus, input:focus{
 }
 
 .contactInputs {
-  background-color: #e0dede;
+  background-color: #026d0e;
   margin: 10px 0 10px 0;
   height: 30px;
   border: 1px solid black;
