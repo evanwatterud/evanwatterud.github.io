@@ -41,29 +41,29 @@ const styles = {
 
   linkedInLogoLink: {
     marginLeft: '4%',
-    height: '48px',
-    width: '48px',
+    height: '40px',
+    width: '40px',
     borderRadius: '50%',
     cursor: 'pointer'
   },
 
   gitHubLogoLink: {
     marginRight: '4%',
-    height: '48px',
-    width: '48px',
+    height: '40px',
+    width: '40px',
     borderRadius: '50%',
     cursor: 'pointer'
   },
 
   linkedInImage: {
     borderRadius: '50%',
-    height: '48px',
-    width: '48px'
+    height: '40px',
+    width: '40px'
   },
 
   gitHubImage: {
     borderRadius: '50%',
-    height: '48px',
-    width: '48px'
+    height: '40px',
+    width: '40px'
   }
 }

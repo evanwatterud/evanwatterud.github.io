@@ -6,11 +6,11 @@ import '../css/navLinks.css'
 
 class NavBar extends React.Component {
   state = {
-    isBottom: false
+    pastSplash: false
   }
 
   onContactClicked = () => {
-    scroll.scrollTo(window.innerHeight)
+    scroll.scrollTo(window.innerHeight + window.innerHeight/2)
   }
 
   onResumeClicked = () => {
@@ -23,10 +23,10 @@ class NavBar extends React.Component {
 
   componentDidMount() {
     document.addEventListener('scroll', () => {
-      const isBottom = window.scrollY > (window.innerHeight * 2) - 1;
-      if (isBottom !== this.state.isBottom) {
+      const pastSplash = window.scrollY > window.innerHeight - 1;
+      if (pastSplash !== this.state.pastSplash) {
         this.setState(prevState => {
-          prevState.isBottom = isBottom
+          prevState.pastSplash = pastSplash
           return prevState
         })
       }
@@ -35,13 +35,13 @@ class NavBar extends React.Component {
 
   render () {
     return (
-      <div style={{...styles.navContainer, opacity: (this.state.isBottom ? 0 : 1)}}>
+      <div className="navContainer" style={{...styles.navContainer, opacity: (this.state.pastSplash ? 0 : 1)}}>
         <div className="navLinks" >
           <a onClick={this.onContactClicked}>
             Contact Me
           </a>
           <a onClick={this.onResumeClicked}>
-            Resume
+            Projects
           </a>
           <a onClick={this.onAboutClicked}>
             About Me

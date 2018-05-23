@@ -1,0 +1,26 @@
+.aboutMeWrapper {
+  flex: 1;
+  display: flex;
+}
+
+.profileImageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImage {
+  object-fit: cover;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  height: 200px;
+  width: 200px;
+}
+
+.aboutMeTextContainer {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  margin-right: 10%;
+}
