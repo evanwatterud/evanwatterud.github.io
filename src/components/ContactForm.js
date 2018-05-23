@@ -10,8 +10,8 @@ class ContactForm extends React.Component {
             method="POST">
           <input className="contactInputs" type="text" name="name" placeholder="Your Name" />
           <input className="contactInputs" type="email" name="_replyto" placeholder="Contact Email" />
-          <textarea name="message" placeholder="Your Message"></textarea>
-          <input id="submitButton" type="submit" value="Send" />
+          <textarea id="messageArea" name="message" placeholder="Your Message"></textarea>
+          <input type="submit" value="Send" />
         </form>
       </div>
     )
