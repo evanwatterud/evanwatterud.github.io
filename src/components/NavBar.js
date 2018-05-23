@@ -23,7 +23,7 @@ class NavBar extends React.Component {
 
   componentDidMount() {
     document.addEventListener('scroll', () => {
-      const pastSplash = window.scrollY > window.innerHeight - 1;
+      const pastSplash = window.scrollY > 5;
       if (pastSplash !== this.state.pastSplash) {
         this.setState(prevState => {
           prevState.pastSplash = pastSplash
@@ -35,7 +35,9 @@ class NavBar extends React.Component {
 
   render () {
     return (
-      <div className="navContainer" style={{...styles.navContainer, opacity: (this.state.pastSplash ? 0 : 1)}}>
+      <div className="navContainer" style={
+          {...styles.navContainer, backgroundColor: (this.state.pastSplash ? 'white' : 'transparent')}
+        }>
         <div className="navLinks" >
           <a onClick={this.onContactClicked}>
             Contact Me
@@ -59,13 +61,9 @@ const styles = {
     height: '8%',
     position: 'fixed',
     top: 0,
-    backgroundColor: '#f7f7f4',
     overflow: 'hidden',
-    WebkitBoxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
-    MozBoxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
-    boxShadow: '0px 5px 5px 0px rgba(0,0,0,0.36)',
     zIndex: 100,
-    transition: 'opacity 0.7s'
+    transition: 'background-color 0.5s'
   }
 }
 

@@ -20,6 +20,7 @@ body, html {
   font-weight: 700;
   font-size: 40px;
   margin-bottom: 5px;
+  cursor: default;
 }
 
 .subHeader {
@@ -28,4 +29,5 @@ body, html {
   font-weight: 500;
   font-size: 25px;
   margin-bottom: 0;
+  cursor: default;
 }

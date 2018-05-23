@@ -24,3 +24,7 @@
   align-items: center;
   margin-right: 10%;
 }
+
+.aboutMeText {
+  cursor: default;
+}
