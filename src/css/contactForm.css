@@ -65,7 +65,6 @@ textarea:focus, input:focus{
   color: #026d0e;
   background: none;
   cursor: pointer;
-  padding: 25px 80px;
   display: inline-block;
   margin: 15px 35%;
   text-transform: uppercase;
@@ -76,6 +75,9 @@ textarea:focus, input:focus{
 	color: #fff;
 	box-shadow: 0 6px #00560a;
   border-radius: 40px;
+  padding: 25px 80px;
+  text-align: center;
+  margin: auto;
 }
 
 .contactForm input[type=submit]:hover {
@@ -86,4 +88,29 @@ textarea:focus, input:focus{
 .contactForm input[type=submit]:active {
 	box-shadow: 0 0 #00560a;
 	top: 6px;
+}
+
+#layoutContainer {
+  display: flex;
+  flex: 1;
+}
+
+#inputsContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#contactMeText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+#contactMeText p {
+  color: white;
+  font-size: 4vw;
+  margin: 0;
+  font-weight: bolder;
 }

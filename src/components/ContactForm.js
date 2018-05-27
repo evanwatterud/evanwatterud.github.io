@@ -8,8 +8,15 @@ class ContactForm extends React.Component {
       <div className="contactFormWrapper" >
         <form className="contactForm" action="https://formspree.io/evanwatterud@gmail.com"
             method="POST">
-          <input className="contactInputs" type="text" name="name" placeholder="Your Name" />
-          <input className="contactInputs" type="email" name="_replyto" placeholder="Contact Email" />
+          <div id="layoutContainer">
+            <div id="inputsContainer">
+              <input className="contactInputs" type="text" name="name" placeholder="Your Name" />
+              <input className="contactInputs" type="email" name="_replyto" placeholder="Contact Email" />
+            </div>
+            <div id="contactMeText">
+              <p>Contact Me:</p>
+            </div>
+          </div>
           <textarea id="messageArea" name="message" placeholder="Your Message"></textarea>
           <input type="submit" value="Send" />
         </form>
