@@ -54,7 +54,10 @@ const styles = {
 
   backgroundImage: {
     flex: 1,
-    width: '100%'
+    width: '100%',
+    height: '100%',
+    position: 'fixed',
+    zIndex: -1000
   },
 
   backgroundImageContainer: {
@@ -64,7 +67,9 @@ const styles = {
 
   aboutMePageContainer: {
     flex: 0.5,
-    display: 'flex'
+    display: 'flex',
+    background: 'white',
+    zIndex: -1
   },
 
   contactPageContainer: {
