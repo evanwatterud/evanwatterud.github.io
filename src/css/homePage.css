@@ -1,5 +1,6 @@
 body, html {
   font-family: Raleway;
+  -webkit-font-smoothing: antialiased;
 }
 
 .homepageTextContainer {

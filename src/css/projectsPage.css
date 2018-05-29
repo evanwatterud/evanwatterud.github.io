@@ -26,4 +26,27 @@
   border: 1px solid black;
   height: 90%;
   transform-style: preserve-3d;
+  cursor: pointer;
+  background-color: #ffffff; 
+  -webkit-transition: background-color 1.5s ease;
+  -moz-transition: background-color 1.5s ease;
+  transition: background-color 1.5s ease;
+}
+
+.project:hover {
+  background-color: #77e8ff;
+}
+
+.projectTitle {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  transform: translateZ(30px);
+}
+
+.projectDescription {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  transform: translateZ(20px);
 }
