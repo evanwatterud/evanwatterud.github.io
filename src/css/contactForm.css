@@ -16,6 +16,7 @@ textarea:focus, input:focus{
 }
 
 #messageArea {
+  font-family: Raleway, sans-serif;
   background-color: #026d0e;
   margin: 10px 0 20px 0;
   height: 140px;
@@ -29,6 +30,7 @@ textarea:focus, input:focus{
 }
 
 .contactInputs {
+  font-family: Raleway, sans-serif;
   background-color: #026d0e;
   margin: 10px 0 10px 0;
   height: 30px;
@@ -43,6 +45,7 @@ textarea:focus, input:focus{
 .contactInputs::placeholder {
   color: white;
   opacity: 0.5;
+  font-family: Raleway, sans-serif;
 }
 
 .contactInputs:focus {
@@ -52,6 +55,7 @@ textarea:focus, input:focus{
 #messageArea::placeholder {
   color: white;
   opacity: 0.5;
+  font-family: Raleway, sans-serif;
 }
 
 #messageArea:focus {

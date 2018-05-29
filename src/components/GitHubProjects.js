@@ -67,7 +67,7 @@ class GitHubProjects extends React.Component {
               Tensorflow as the backend.
             </h4>
           </div>
-          <div className="project" onClick={() => this.onProjectClicked("evanwatterud.github.io")}>
+          <div className="project" onClick={() => this.onProjectClicked("evanwatterud\n.github.io")}>
             <h1 className="projectTitle" >evanwatterud.github.io</h1>
             <h4 className="projectDescription" >
               This website! Written with React.js.
