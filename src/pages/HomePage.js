@@ -7,10 +7,9 @@ import SocialBar from '../components/SocialBar'
 import NavBar from '../components/NavBar'
 import ContactForm from '../components/ContactForm'
 import AboutMe from '../components/AboutMe'
+import GitHubProjects from '../components/GitHubProjects'
 
 import '../css/homePage.css'
-import resume from '../assets/resume.pdf'
-import PDF from 'react-pdf-js'
 
 class HomePage extends React.Component {
 
@@ -36,8 +35,8 @@ class HomePage extends React.Component {
           <ContactForm />
         </div>
 
-        <div style={styles.resumePageContainer}>
-          <PDF fillWidth style={styles.resume} file={resume} />
+        <div style={styles.projectsPageContainer}>
+          <GitHubProjects />
         </div>
       </div>
     )
@@ -80,19 +79,12 @@ const styles = {
     backgroundColor: '#058414'
   },
 
-  resumePageContainer: {
+  projectsPageContainer: {
     flex: 1,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f7f7f7'
-  },
-
-  resume: {
-    border: '1px solid rgba(0, 0, 0, .3)',
-    WebkitBoxShadow: '5px 5px 5px 0px rgba(0,0,0,0.36)',
-    MozBoxShadow: '5px 5px 5px 0px rgba(0,0,0,0.36)',
-    boxShadow: '5px 5px 5px 0px rgba(0,0,0,0.36)',
+    backgroundColor: 'white'
   }
 }
 

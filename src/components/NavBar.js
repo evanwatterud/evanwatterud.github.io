@@ -18,7 +18,7 @@ class NavBar extends React.Component {
   }
 
   onAboutClicked = () => {
-    scroll.scrollTo(window.innerHeight)
+    scroll.scrollTo(window.innerHeight - 0.08*window.innerHeight)
   }
 
   componentDidMount() {

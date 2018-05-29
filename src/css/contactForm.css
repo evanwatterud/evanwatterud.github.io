@@ -17,7 +17,7 @@ textarea:focus, input:focus{
 
 #messageArea {
   background-color: #026d0e;
-  margin: 10px 0 10px 0;
+  margin: 10px 0 20px 0;
   height: 140px;
   border: none;
   resize: none;
@@ -66,7 +66,6 @@ textarea:focus, input:focus{
   background: none;
   cursor: pointer;
   display: inline-block;
-  margin: 15px 35%;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
