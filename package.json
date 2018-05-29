@@ -13,7 +13,8 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
     "react-scroll": "^1.7.9",
-    "style-it": "^2.0.0"
+    "style-it": "^2.0.0",
+    "vanilla-tilt": "^1.4.1"
   },
   "scripts": {
     "start": "react-scripts start",

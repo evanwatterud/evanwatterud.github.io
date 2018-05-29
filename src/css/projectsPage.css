@@ -25,4 +25,5 @@
   margin: 15px;
   border: 1px solid black;
   height: 90%;
+  transform-style: preserve-3d;
 }
