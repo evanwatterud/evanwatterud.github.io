@@ -68,7 +68,7 @@ const styles = {
     flex: 0.5,
     display: 'flex',
     background: 'white',
-    zIndex: -1
+    zIndex: 0
   },
 
   contactPageContainer: {
