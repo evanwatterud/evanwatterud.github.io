@@ -2,7 +2,7 @@
   "name": "evanwatterud.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "evanwatterud.com",
+  "homepage": "evanwatterud.github.io",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "p5": "^0.6.1",
